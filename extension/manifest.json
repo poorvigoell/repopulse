@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Repo-Pulse",
+  "version": "1.0.0",
+  "description": "Talent intelligence for GitHub profiles",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/*",
+        "https://github.com/*/",
+        "https://github.com/*"
+      ],
+      "js": ["src/content/index.jsx"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
